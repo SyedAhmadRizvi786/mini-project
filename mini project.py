@@ -30,3 +30,22 @@ def buy_item():
           else:
                print("Item not available")
                exit()
+               def update_inventory():
+     name=input("Enter the name of the item:")
+     count=int(input("Enter the new count of the item:"))
+     for key , values in inventory.items():
+          if key==name:
+               inventory[key]["count"]=count
+               print("Count updated successfully")
+               break
+          else:
+               print("item not available")
+               exit()
+               def display_inventory():
+     total_sale=0
+     print("Inventory:")
+     for key , values in inventory.items():
+          print(f"{key} : {values['count']}")
+          total_sale+=values['price']*values['count']
+          print(f"Total sales: {total_sale}")
+     
