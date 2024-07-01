@@ -19,4 +19,14 @@ def buy_item():
             print("Yahooo! You have purchased this item successfully")
         else:
             print("item not available")
-    
+    def change_price():
+     name=input("Enter the name of the item:")
+     price=int(input("Enter the new price of the item:"))
+     for key , values in inventory.items():
+          if key==name:
+               inventory[key]["price"]=price
+               print("Price updated successfully")
+               break
+          else:
+               print("Item not available")
+               exit()
